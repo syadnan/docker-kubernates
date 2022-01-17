@@ -1,0 +1,31 @@
+sudo docker -version
+
+hub.docker.com  --   whalesay
+	sudo docker run docker/whalesay cowsay Hello-World!
+	
+
+docker run nginx
+
+docker ps
+docker ps -a
+
+docker stop <name>
+docker stop <appID>
+
+docker rm <name>
+
+
+docker images
+docker rmi <imageNAME>
+
+docker pull nginx      --   not start to run
+
+
+docker run ubuntu sleep 5
+
+docker exec distracted_mcclintock cat /etc/hosts
+
+docker -d run httpd
+docker attach <appID>
+
+

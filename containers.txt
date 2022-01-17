@@ -1,0 +1,56 @@
+Containers are completely isolated env.
+As they have their own processes or services, their own network interfaces, their own mounts just like VM,
+Except they all share the same OS kernel.
+
+
+Docker utilizes LXC containers.
+Setting up these containers environment is hared as they are very low level, that is where docker offer high level tool with several powerful functionality.
+
+Docker can run any flavor of OS on top it as log as they all based on same kernel.
+(if the underlying OS is UBUNTU - Docker can run container based on another disribution like Debian, Fedora, SUSE)
+
+	Hardware Infrastructure (Can be Hypervised VM)
+		OS
+			Docker
+				Container1
+					Application
+					Libs
+					Dependencies
+				Container2
+					Application
+					Libs
+					Dependencies
+
+
+Community Edition - Free
+Enterprice Edition - Certified ans Supported Plan
+	Image Management
+	Imagre Security
+
+
+
+Install Docker - Demo
+	Identify System  --  cat /etc/*release*
+	Get Docker  --  docs.docker.com  --  Download and Install
+	
+	uninstall any older versio (if present) - Docker Engine package is now called docker-ce
+		sudo apt-get remove docker docker-engine docker.io containerd runc
+
+	Using Automated Script -- Install using the convenience script
+		curl -fsSL https://get.docker.com -o get-docker.sh
+		DRY_RUN=1 sh ./get-docker.sh
+		
+		
+Manage Docker as a non-root user
+	sudo groupadd docker
+	sudo usermod -aG docker $USER
+	newgrp docker 
+	docker run hello-world
+	
+	sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+	sudo chmod g+rwx "$HOME/.docker" -R
+ 
+ 
+Configure Docker to start on boot
+	sudo systemctl enable docker.service
+	sudo systemctl enable containerd.service
