@@ -39,6 +39,7 @@ Install Docker - Demo
 		curl -fsSL https://get.docker.com -o get-docker.sh
 		DRY_RUN=1 sh ./get-docker.sh
 		
+		sudo dpkg -i containerd.io_1.4.12-1_armhf.deb docker-ce-cli_20.10.12~3-0~debian-bullseye_armhf.deb docker-ce-rootless-extras_20.10.12~3-0~debian-bullseye_armhf.deb docker-ce_20.10.12~3-0~debian-bullseye_armhf.deb 
 		
 Manage Docker as a non-root user
 	sudo groupadd docker

@@ -1,4 +1,4 @@
-sudo docker -version
+sudo docker version
 
 hub.docker.com  --   whalesay
 	sudo docker run docker/whalesay cowsay Hello-World!
@@ -8,6 +8,7 @@ docker run nginx
 
 docker ps
 docker ps -a
+
 
 docker stop <name>
 docker stop <appID>
