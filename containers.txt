@@ -28,7 +28,6 @@ Enterprice Edition - Certified ans Supported Plan
 	Imagre Security
 
 
-
 Install Docker - Demo
 	Identify System  --  cat /etc/*release*
 	Get Docker  --  docs.docker.com  --  Download and Install
